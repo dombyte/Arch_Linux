@@ -1,0 +1,10 @@
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINejfTDyillr6LmnBICKPF+OXQy+Q3ww/Dkbjc/Znj1c
+	name = dombyte
+	email = 78966793+dombyte@users.noreply.github.com
+[commit]
+	gpgsign = true
