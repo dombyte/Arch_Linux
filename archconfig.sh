@@ -58,18 +58,15 @@ sudo sed -i -E '/^HOOKS=\(/ {
 sudo mkinitcpio -P
 sudo systemctl enable --now grub-btrfsd.service 
 
-echo "Install Ohmybash"
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" --unattended
-
 echo "Install Powerline Fonts"
 git clone https://github.com/powerline/fonts.git /tmp/fonts
 sh /tmp/fonts/install.sh
 
+echo "Install Fish Shell"
+sudo pacman -S fish
 
-echo "Backup .bashrc"
-cp "$HOME/.bashrc" "$HOME/.bashrc_$TIMESTAMP.bak"
-echo "Copy .bashrc"
-cp "src/.bashrc" "$HOME/.bashrc"
+echo "Add Console Profile for Fish"
+cp "src/.local/share/konsole/Fish.profile" "$HOME/.local/share/konsole/Fish.profile"
 
 echo "Backup .gitconfig"
 cp "$HOME/.gitconfig" "$HOME/.gitconfig_$TIMESTAMP.bak"
