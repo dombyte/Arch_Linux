@@ -25,7 +25,14 @@ yay -S --noconfirm \
     solaar \
     onlyoffice-bin \
     betterbird-bin \
-    cryptomator-bin 
+    cryptomator-bin \
+    ufw \
+    os-prober
+
+echo "Enable os-prober for Grub"
+echo "GRUB_DISABLE_OS_PROBER=false" | sudo tee -a  /etc/default/grub
+echo "Generate grub.cfg"
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "Install Snapper"
 sudo pacman -S --noconfirm \
@@ -68,12 +75,12 @@ sudo pacman -S fish
 echo "Add Console Profile for Fish"
 cp "src/.local/share/konsole/Fish.profile" "$HOME/.local/share/konsole/Fish.profile"
 
-echo "Backup .gitconfig"
-cp "$HOME/.gitconfig" "$HOME/.gitconfig_$TIMESTAMP.bak"
+# echo "Backup .gitconfig"
+# cp "$HOME/.gitconfig" "$HOME/.gitconfig_$TIMESTAMP.bak"
 echo "Copy .gitconfig"
 cp "src/.gitconfig" "$HOME/.gitconfig"
 
-echo "Backup kcminputrc"
-cp "$HOME/.config/kcminputrc" "$HOME/.config/kcminputrcg_$TIMESTAMP.bak"
+# echo "Backup kcminputrc"
+# cp "$HOME/.config/kcminputrc" "$HOME/.config/kcminputrcg_$TIMESTAMP.bak"
 echo "Copy kcminputrc"
 cp "src/.config/kcminputrc" "$HOME/.config/kcminputrc"
