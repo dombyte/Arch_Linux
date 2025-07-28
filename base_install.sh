@@ -23,7 +23,9 @@ additional_packages() {
     fish \
     fastfetch \
     kitty \
-    obsidian
+    obsidian \ 
+    ansible \
+    flameshot \
 }
 
 additional_fonts() {
