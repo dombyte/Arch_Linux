@@ -38,18 +38,10 @@ cd Arch_Linux/
 ```
 
 ```shell
-sh archconfig.sh
+sh autoinstall.sh
 ```
 
-## Manual Steps
-
-```shell
-git clone https://github.com/dombyte/Arch_Linux.git
-```
-
-```shell
-cd Arch_Linux/
-```
+## Manual Steps for Snapper
 
 #### Reinstall Grub
 
@@ -72,12 +64,6 @@ sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-```
-
-#### custom packages
-
-```shell
-yay -S localsend-bin brave-bin 1password filen-desktop-bin visual-studio-code-bin solaar onlyoffice-bin betterbird-bin cryptomator-bin
 ```
 
 #### Snapper
