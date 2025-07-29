@@ -121,7 +121,7 @@ sudo pacman -S --noconfirm \
     polkit-kde-agent \
     qt5-wayland \
     qt6-wayland \
-    dunst \
+    dunst 
 
 sudo systemctl enable sddm.service
 sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
