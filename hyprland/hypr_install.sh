@@ -101,7 +101,8 @@ update_hyprconfig() {
 }
 
 sudo pacman -S --noconfirm --needed git base-devel 
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si # builds with makepkg
+git clone https://aur.archlinux.org/yay.git yay
+cd yay && makepkg -si # builds with makepkg
 sudo pacman -S --noconfirm \
     pipewire \
     wireplumber \
