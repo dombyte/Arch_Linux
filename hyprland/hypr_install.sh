@@ -110,7 +110,7 @@ sudo pacman -S --noconfirm \
     hyprland \
     nvidia-dkms \
     nvidia-utils \
-    lib32-nvidia-utils \
+    # lib32-nvidia-utils \
     egl-wayland \
     xorg-xwayland \
     curl \
