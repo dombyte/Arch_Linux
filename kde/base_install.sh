@@ -24,8 +24,7 @@ additional_packages() {
     fastfetch \
     kitty \
     obsidian \ 
-    ansible \
-    flameshot \
+    ansible
 }
 
 additional_fonts() {
@@ -40,6 +39,7 @@ dotfiles() {
     cp -r "${HOME}/.config/" "${HOME}/.config-bak"
     git clone https://github.com/dombyte/dotfiles.git dotfiles
     cp -r dotfiles/kde/.config/* "$HOME/.config/"
+    sudo rm -rf $HOME/dotfiles
 }
 
 
