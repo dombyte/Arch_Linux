@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -e
+set -o pipefail
+
+
 
 # This script updates the NVIDIA modules in a configuration file for Hyprland.
 nvidia_modules() {
