@@ -39,7 +39,7 @@ dotfiles() {
     cd "$HOME" 
     cp -r "${HOME}/.config/" "${HOME}/.config-bak"
     git clone https://github.com/dombyte/dotfiles.git dotfiles
-    cp -r dotfiles/.config/* "$HOME/.config/"
+    cp -r dotfiles/kde/.config/* "$HOME/.config/"
 }
 
 
