@@ -104,6 +104,7 @@ sudo pacman -S --noconfirm --needed git base-devel
 git clone https://aur.archlinux.org/yay.git yay
 cd yay && makepkg -si # builds with makepkg
 sudo pacman -S --noconfirm \
+    unzip \
     pipewire \
     wireplumber \
     linux-headers \
@@ -120,6 +121,7 @@ sudo pacman -S --noconfirm \
     polkit-kde-agent \
     qt5-wayland \
     qt6-wayland \
+    egl-wayland \
     dunst 
 
 sudo systemctl enable sddm.service
