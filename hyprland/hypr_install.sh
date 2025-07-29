@@ -100,8 +100,8 @@ update_hyprconfig() {
     echo "✅ Hyprland configuration updated."
 }
 
-pacman -S --noconfirm --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si # builds with makepkg
-pacman -S --noconfirm \
+sudo pacman -S --noconfirm --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si # builds with makepkg
+sudo pacman -S --noconfirm \
     pipewire \
     wireplumber \
     linux-headers \
@@ -121,7 +121,7 @@ pacman -S --noconfirm \
     qt6-wayland \
     dunst \
 
-systemctl enable sddm.service
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
+sudo systemctl enable sddm.service
+sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/install_manual.sh)"
 nvidia_modules
 update_hyprconfig
