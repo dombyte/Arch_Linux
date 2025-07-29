@@ -23,8 +23,9 @@ additional_packages() {
     fish \
     fastfetch \
     kitty \
-    obsidian \ 
-    ansible
+    obsidian \
+    curl \
+    unzip
 }
 
 additional_fonts() {
